@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@pusher/chatkit-client": "^1.14.1",
+    "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "core-js": "^3.6.5",
     "ldbutton": "^1.0.2",

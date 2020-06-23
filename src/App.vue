@@ -6,13 +6,11 @@
 
 <script>
 
+  export default {
 
-export default {
-  name: 'App',
-  components: {
-  
+    name: 'App',
+    components: {}
   }
-}
 </script>
 
 <style lang="scss">
