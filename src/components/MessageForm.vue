@@ -2,7 +2,7 @@
   <div class="message-form ld-over">
     <small class="text-muted">@{{ user.username }}</small>
     <b-form
-      @submit.prevent="onsubmit"
+      @submit.prevent="onSubmit"
       class="ld-over"
       v-bind:class="{ running: sending }"
     >

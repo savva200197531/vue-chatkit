@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import {BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueChatScroll from 'vue-chat-scroll';
+import {BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
