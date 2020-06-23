@@ -4,7 +4,7 @@
     <hr>
     <b-form @submit.prevent="onSubmit">
       <b-alert variant="danger" :show="hasError">{{ error }}</b-alert>
-      
+
       <b-form-group id="userInputGroup"
                     label="User Name"
                     label-for="userInput">
@@ -17,7 +17,7 @@
                       required>
         </b-form-input>
       </b-form-group>
-      
+
       <b-button type="submit"
                 variant="primary"
                 class="ld-ext-right"
@@ -31,40 +31,40 @@
 </template>
 
 <script>
-  import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
-  export default {
-    name: 'loginForm',
-    data() {
-      return {
-        userId: '',
-      }
+export default {
+  name: 'loginForm',
+  data() {
+    return {
+      userId: '',
+    }
+  },
+  computed: {
+    isValid: function () {
+      const result = this.userId.length < 3;
+      return result ? result : this.loading
     },
-    computed: {
-      isValid: function () {
-        const result = this.userId.length < 3;
-        return result ? result : this.loading
-      },
-      ...mapState([
-        'loading',
-        'error'
-      ]),
-      ...mapGetters([
-        'hasError'
-      ])
-    },
-    methods: {
-      ...mapActions([
-        'login'
-      ]),
-      async onSubmit() {
-        const result = await this.login(this.userId);
-        if(result) {
-          this.$router.push('chat');
-        }
+    ...mapState([
+      'loading',
+      'error'
+    ]),
+    ...mapGetters([
+      'hasError'
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'login'
+    ]),
+    async onSubmit() {
+      const result = await this.login(this.userId);
+      if (result) {
+        this.$router.push('chat');
       }
     }
   }
+}
 
 </script>
 
